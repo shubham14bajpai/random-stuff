@@ -8,4 +8,5 @@ process_names:
     - kube-scheduler
     - kubelet
     - kube-apiserver
+    - tinykube
 

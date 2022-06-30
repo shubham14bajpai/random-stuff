@@ -1,14 +1,11 @@
 global:
   scrape_interval: 5s
   external_labels:
-    monitor: 'node'
+    monitor: 'process-exporter'
 scrape_configs:
   - job_name: 'prometheus' 
     static_configs: 
-      - targets: ['10.79.176.64:9090'] ## IP Address of the localhost
-  - job_name: 'node' 
-    static_configs: 
-      - targets: ['10.79.176.64:9100'] ## IP Address of the localhost
+      - targets: ['hostip:9090'] ## IP Address of the localhost
   - job_name: 'process_exporter' 
     static_configs: 
-      - targets: ['10.79.176.64:9256'] ## IP Address of the localhost
+      - targets: ['hostip:9256'] ## IP Address of the localhost
